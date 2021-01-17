@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+header{
+    position: fixed;
+    background-color: #22242A;
+    padding: 20px;
+    width: 100%;
+    height: 30px;
+}
+
+.left_area h3{
+ color: #fff;
+ margin: 0;
+ text-transform: uppercase;
+ font-size: 22px;
+ font-weight: 900;
+}
+
+.left_area span{
+    color: #ff7a00;
+}
+
+
+.logout_btn{
+    padding: 5px;
+    background-color: #ff7a00;
+    text-decoration: none;
+    float: right;
+    margin-top: -30px;
+    margin-right: 40px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.5s;
+    transition-property: background;
+}
+
+.logout_btn:hover{
+    background-color: #cc8b4f;
+}
+
+
+.sidebar{
+    background-color: #2f323A;
+    margin-top: 70px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+}
+
+.sidebar .perfil_imagem{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+
+.sidebar h4 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar a{
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+}
+
+
+.sidebar a:hover{
+    background-color: #ff7a00;
+}
+
+.sidebar i{
+ padding-right: 10px;
+}
+
+label #sidebar_btn{
+    z-index: 1;
+    color: #fff;
+    position: fixed;
+    cursor: pointer;
+    left: 300px;
+    font-size: 20px;
+    margin: 5px 0;
+    transition: 0.5s;
+    transition-property: color;
+}
+
+
+label #sidebar_btn:hover{
+    color: #ff7a00;
+}
+
+#check:checked ~ .sidebar{
+    left: -190px;
+}
+
+#check:checked ~ .sidebar a span{
+    display: none;
+}
+
+
+#check:checked ~.sidebar a{
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+}
+
+
+.content{
+    margin-left: 250px;
+    padding: 10px;
+    height: 100vh;
+    transition: 0.5s;
+    padding-top: 80px;
+}
+
+#check:checked ~ .content{
+    margin-left: 60px;
+}
+
+#check{
+    display: none;
+}
+
+/* Tabela de listar alunos */
+
+
+
+table{
+    text-align: center;
+    width: 100%;
+}
+
+table, th, td{
+}
+
+
+th{
+    background-color: #2f323A;
+    color: #fff;
+    padding: 10px;
+}
+
+td{
+    padding: 10px;
+}
+
+
+.btn-primary, .btn-danger, .btn-success{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 15px;
+    border-radius: 13px;
+}
+
+
+.btn-primary{
+    background-color: #2b5adb;
+}
+
+.btn-danger{
+    background-color: #da240c;
+}
+
+.btn-success{
+    background-color: #25be3a;
+}
+
+
+
+/* formulario de adicionar aluno */
+
+
+.formulario{
+    display: flex;
+    justify-content: left;
+    margin-top: 30px;
+}
+
+input{
+    margin-bottom: 10px;
+}
+
+
+input[type=text],
+input[type=number],
+input[type=date],
+select,
+input[type=email]{
+    font-size: 14px;
+    display: block;
+    width: 400px;
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    height: 40px;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #000;
+}
+
+input[type=submit]{
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #078607;
+    border: 0;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+/* painel dashboard */
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_user,
+.card_venc{
+    margin-right: 20px;
+}
+
+.card_user,
+.card_venc,
+.card_money{
+    box-sizing: border-box;
+    color:#fff;
+    padding: 15px;
+    flex: 2;
+    height: 150px;
+    width: 60px;
+    box-shadow: 1px 1px 12px 0px #555;
+}
+
+
+.card_user{
+    background-color: #ff7a00;
+}
+.card_venc{
+    background-color: #2b5adb;
+}
+.card_money{
+    background-color: #078607;
+}
+
+
+.card_user .desc{
+    font-size: 22px;
+}
