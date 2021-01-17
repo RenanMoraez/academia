@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 17-Jan-2021 às 14:43
+-- Tempo de geração: 17-Jan-2021 às 15:44
 -- Versão do servidor: 10.4.14-MariaDB
 -- versão do PHP: 7.4.11
 
@@ -43,8 +43,8 @@ CREATE TABLE `alunos` (
 --
 
 INSERT INTO `alunos` (`id`, `nome`, `email`, `telefone`, `datanascimento`, `modalidade`, `datainicio`, `mensalidade`) VALUES
-(1, 'Renan Moraes De Araujo', 'renanmoraesaraujo@gmail.com', '91982718049', '1994-07-19', 1, '2021-01-13', '60'),
-(2, 'Maria', 'maria@gmail.com', '91982718049', '1996-07-19', 1, '2020-01-02', '60');
+(1, 'Renan', 'renan@gmail.com', '999999999', '1994-07-05', 1, '2021-01-13', '60'),
+(2, 'Maria', 'maria@gmail.com', '9999999999', '1996-09-19', 1, '2020-01-02', '60');
 
 -- --------------------------------------------------------
 
