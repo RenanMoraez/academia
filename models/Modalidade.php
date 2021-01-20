@@ -22,6 +22,7 @@ class Modalidade{
     public function setNome($n){
         $this->nome = ucwords(trim($n));
     }
+
 }
     
 interface ModalidadeDAO{
@@ -31,4 +32,5 @@ interface ModalidadeDAO{
     public function findById($id);
     public function update(Modalidade $m);
     public function delete($id);
+
 }

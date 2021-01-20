@@ -7,7 +7,8 @@ require 'header.php';
 
 
 $alunoDAO = new AlunoDaoMysql($pdo);
-$lista = $alunoDAO->findAll();
+$lista = $alunoDAO->vencimento();
+
 
 ?>
 
@@ -46,7 +47,7 @@ $lista = $alunoDAO->findAll();
             <?php foreach($lista as $aluno): ?>
                 <tr>              
                     <td><?= $aluno->getNome();?></td>
-                    <td><?= date('d/m/Y',strtotime($aluno->getDatainicio()));  ?>  <span class="contador">  - 30 dias</span></td>
+                    <td><?= date('d/m/Y',strtotime($aluno->getVencimento())); ?>  <span class="contador">  - 30 dias</span></td>
                 </tr>
 
             <?php endforeach; ?> 

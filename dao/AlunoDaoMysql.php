@@ -129,4 +129,35 @@ class AlunoDaoMysql implements AlunoDAO{
         $sql->execute();
 
     }
+
+
+    public function vencimento(){
+
+        $array = [];
+        
+        $sql = $this->pdo->query("SELECT *,(DATE_ADD(alunos.datainicio, INTERVAL 1 MONTH)) vencimento FROM alunos");
+        if($sql->rowCount() > 0){
+            $data = $sql->fetchAll();
+
+            foreach ($data as $item) {
+                $a = new Aluno();
+                $a->setId($item['id']);
+                $a->setNome($item['nome']);
+                $a->setEmail($item['email']);
+                $a->setTelefone($item['telefone']);
+                $a->setDatanascimento($item['datanascimento']);
+                $a->setModalidade($item['modalidade']);
+                $a->setDatainicio($item['datainicio']);
+                $a->setMensalidade($item['mensalidade']);
+                $a->setVencimento($item['vencimento']);
+
+                $array[] = $a;
+            }
+        }
+
+        return $array;
+
+    }
 }
+
+

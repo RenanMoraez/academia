@@ -10,6 +10,7 @@ class Aluno{
     private $modalidade;
     private $datainicio;
     private $mensalidade;
+    private $vencimento;
 
 
     public function getId(){
@@ -70,6 +71,16 @@ class Aluno{
         $this->mensalidade = trim($mm);
     }
 
+    public function getVencimento(){
+        return $this->vencimento;
+    }
+
+    public function setVencimento($v){
+        $this->vencimento = $v;
+    }
+
+
+
 }
     
 interface AlunoDAO{
@@ -80,5 +91,6 @@ interface AlunoDAO{
     public function findByEmail($email);
     public function update(Aluno $a);
     public function delete($id);
+    public function vencimento();
 
 }
